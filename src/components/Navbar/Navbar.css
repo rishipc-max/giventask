@@ -1,0 +1,32 @@
+.header {
+    padding: 1.2% 7% 1% 7%;
+    position: relative;
+    height: 100vh;
+    text-align: start;
+    align-items: flex-start;
+  }
+  .navbar-nav .nav-link.active {
+    color: rgb(49, 131, 226);
+    font-weight: bold;
+  }
+  .nav-link {
+    color: white;
+    font-family: "Inter", sans-serif;
+  }
+  .navbar-inner {
+    background-color:transparent;
+  }
+  .nav-item {
+    margin-left: 60px;
+  } 
+  
+@media (max-width: 1190px) {
+  .nav-item {
+    margin-left: 40px;
+  }
+}
+@media (max-width: 1050px) {
+  .nav-item {
+    margin-left: 30px;
+  }
+}

@@ -1,0 +1,98 @@
+.services-section {
+   padding: 4.5% 7% 4% 7%;
+   width: 100%;
+   font-family: "Inter", sans-serif;
+   background-color: #F2F2F2;
+   position: relative;
+}
+
+.service-box {
+    margin-top: 20px;
+    max-width: 90%;
+}
+
+.service-box img {
+    width: 100%;
+    height: auto;
+}
+.services-section h1 {
+    font-size: 32px;
+    color: #333333;
+}
+.service-box h3 {
+    font-size: 18px;
+    color: #333333;
+    margin: 15px 0;
+}
+
+.service-box p {
+    font-size: 16px;
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+.service-box a {
+    margin-top: 10px;
+    margin-left: 3px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #0485CB;
+    padding: 8px 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.service-box a:hover {
+    background-color: #004B74;
+}
+
+.nav-buttons {
+    position: relative;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.nav-buttons a {
+    text-decoration: none;
+    color: #007bff;
+    margin: 0 10px;
+}
+
+.nav-buttons a:hover {
+    text-decoration: underline;
+}
+.css-ts5inf-MuiSvgIcon-root{
+    margin-left: -30px;
+}
+@media (max-width: 1024px) {
+    .service-box {
+       width: 90%;
+    }
+    .c-3{
+        display: none;
+    }
+    .services-container {   
+        justify-content: space-around;
+    }
+}
+@media (max-width: 700px) {
+    .css-ts5inf-MuiSvgIcon-root{
+        margin-left: 0px;
+    }
+    .nav-buttons {
+    text-align: center;
+    position: relative;
+    }
+    .service-box {
+        max-width: 100%; 
+    }
+    .c-2{
+        display: none;
+    }
+    .c-3{
+        display: none;
+    }
+    .services-container {   
+        justify-content: space-around;
+    }
+}

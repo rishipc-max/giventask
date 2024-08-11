@@ -1,0 +1,86 @@
+.bg-img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  position:absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.banner-texts {
+  color: white;
+  text-align: center;
+  /* margin: 0; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Inter", sans-serif;
+}
+.banner-texts h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+.git-button {
+  background-color: #0485CB;
+  text-align: center;
+  padding: 10px 30px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  font-family: "Inter", sans-serif;
+  border-style: none;
+}
+.git-button:hover {
+  color: #ffffff;
+  background-color: #004B74;
+}
+@media (max-width:1055px) {
+  .banner-texts { 
+      width: 50%;  
+    }
+    .banner-texts h1{
+      font-size: 49px;
+    }
+  
+}
+@media (max-width:861px) {
+  .banner-texts { 
+      width: 70%;  
+    }
+    .banner-texts h1{
+      font-size: 45px;
+    }
+  
+}
+/* For Big Phone screen */
+@media (max-width: 575px) {
+    .banner-texts {
+        text-align: start;
+        width: 100%;
+        padding: 0 5% 0 5%;
+      }
+      .banner-texts h1{
+        font-size: 49px;
+      }
+    
+}
+/* For Regular Phone screen */
+@media (max-width: 480px) {
+    .banner-texts h1{
+        font-size: 43px;
+      }
+}
+/* For Mid Phone screen */
+@media (max-width: 420px) {
+    .banner-texts h1{
+        font-size: 38px;
+      }
+}
+/* For Small Phone screen */
+@media (max-width: 375px) {
+    .banner-texts h1{
+        font-size: 30px;
+      }
+}

@@ -1,0 +1,45 @@
+.stats-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #0078D7;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.stat h2 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.stat p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .stats-section {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .stat h2 {
+        font-size: 1.5rem;
+    }
+
+    .stat p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .stat h2 {
+        font-size: 1.25rem;
+    }
+
+    .stat p {
+        font-size: 0.8rem;
+    }
+}
