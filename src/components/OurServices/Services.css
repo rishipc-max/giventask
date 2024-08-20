@@ -5,10 +5,9 @@
    background-color: #F2F2F2;
    position: relative;
 }
-
 .service-box {
-    margin-top: 20px;
-    max-width: 90%;
+    padding: 10px; /* Padding inside each box to create space between them */
+    max-width: 100%;    
 }
 
 .service-box img {
@@ -63,6 +62,13 @@
 }
 .css-ts5inf-MuiSvgIcon-root{
     margin-left: -30px;
+}
+.prev-btn:hover, .next-btn:hover {
+    color: #004B74; /* Darker blue on hover */
+}
+
+.prev-btn p, .next-btn p {
+    transition: color 0.3s ease;
 }
 @media (max-width: 1024px) {
     .service-box {
