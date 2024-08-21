@@ -7,40 +7,14 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Prev from "../../components/OurServices/PrevBtn";
 import Next from "../../components/OurServices/NextBtn";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useMediaQuery } from "@mui/material";
 
-
-// const settings = {
-//     dots: false,
-//     infinite: false,
-//     speed: 500,
-//     slidesToShow: 3,
-//     slidesToScroll: 3,
-   
-//     prevArrow: <Prev/>,
-//     nextArrow: <Next /> ,
-//     autoplay: false,
-//     responsive: [
-//       {
-//         breakpoint: 768,
-//         settings: {
-//           slidesToShow: 1,
-//           slidesToScroll: 1,
-//         },
-//       },
-//     ],
-//   };
 
 const Services = () => {
-  const [selectedButton, setSelectedButton] = useState(null);
 
-  const handlePrevClick = () => {
-    setSelectedButton("prev");
-  };
-
-  const handleNextClick = () => {
-    setSelectedButton("next");
-  };
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [totalSlides, setTotalSlides] = useState(0);
 
   const settings = {
     dots: false,
@@ -48,8 +22,10 @@ const Services = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
-    prevArrow: <Prev onClick={handlePrevClick} isSelected={selectedButton === "prev"} />,
-    nextArrow: <Next onClick={handleNextClick} isSelected={selectedButton === "next"} />,
+    beforeChange: (current, next) => setCurrentSlide(next),
+    afterChange: (index) => setCurrentSlide(index),
+    prevArrow: <Prev disabled={currentSlide === 0} />,
+    nextArrow: <Next disabled={currentSlide >= totalSlides - 3} />,
     autoplay: false,
     responsive: [
       {
@@ -61,6 +37,13 @@ const Services = () => {
       },
     ],
   };
+  const isMobile = useMediaQuery("(max-width:768px)");
+  useEffect(() => {
+    // Calculate the total number of slides based on your images
+    const totalImages = isMobile ? 8 : 6; // You have 3 images in your example
+    setTotalSlides(totalImages);
+  }, []);
+
 
   return (
       <div className="services-section">
@@ -91,21 +74,21 @@ const Services = () => {
             </div>
             <div className="c-3 service-box">
                 <img src={image1} alt="Services Four" />
-                <h3>Services Three</h3>
+                <h3>Services Four</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur
                 adipiscing elit. Curabitur quis semper sapien. Integer aliquam, purus sit amet fermentum blandit, ex arcu eleifend eros, at fermentum turpis lorem a purus.</p>
                 <a href="/">Know More</a>
             </div>
             <div className="c-3 service-box">
                 <img src={image2} alt="Services Five" />
-                <h3>Services Three</h3>
+                <h3>Services Five</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur
                 adipiscing elit. Curabitur quis semper sapien. Integer aliquam, purus sit amet fermentum blandit, ex arcu eleifend eros, at fermentum turpis lorem a purus.</p>
                 <a href="/">Know More</a>
             </div>
             <div className="c-3 service-box">
                 <img src={image3} alt="Services Six" />
-                <h3>Services Three</h3>
+                <h3>Services Six</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur
                 adipiscing elit. Curabitur quis semper sapien. Integer aliquam, purus sit amet fermentum blandit, ex arcu eleifend eros, at fermentum turpis lorem a purus.</p>
                 <a href="/">Know More</a>

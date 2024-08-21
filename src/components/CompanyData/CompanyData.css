@@ -32,6 +32,9 @@
     .stat p {
         font-size: 0.9rem;
     }
+    .stats-section {
+        padding: 40px
+    }
 }
 
 @media (max-width: 480px) {

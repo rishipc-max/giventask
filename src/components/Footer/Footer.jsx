@@ -11,10 +11,10 @@ const Footer = () => {
     <footer>
     <div className="footer-container">
         <div className="social-icons">
-            <a href="/"> <img src={ln} alt="" /> </a>
-            <a href="/"> <img src={x} alt="" /> </a>
-            <a href="/"> <img src={insta} alt="" /> </a>
-            <a href="/"> <img src={fb} alt="" /> </a>
+            <a href="/"> <img className='si' src={ln} alt="" /> </a>
+            <a href="/"> <img className='si' src={x} alt="" /> </a>
+            <a href="/"> <img className='si' src={insta} alt="" /> </a>
+            <a href="/"> <img className='si' src={fb} alt="" /> </a>
         </div>
         <ul className="footer-nav">
             <li><a href="/">Home</a></li>

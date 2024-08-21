@@ -1,14 +1,22 @@
 import { KeyboardArrowLeft } from "@mui/icons-material";
+import { useMediaQuery } from "@mui/material";
+import "./Services.css";
 import React from "react";
 
-const PrevBtn = ({ onClick, isSelected }) => {
+const PrevBtn = ({ onClick, disabled  }) => {
+
+  const isMobile = useMediaQuery("(max-width:575px)");
 
   return (
     <div 
-    onClick={onClick} 
-    style={{position: "absolute", top: "-40px", right: "90px", cursor: "pointer", color: isSelected ? "blue" : "black"}}
+    onClick={!disabled ? onClick : null}    
+    style={{position: "absolute",
+        top:  isMobile ? "520px" :  "-45px",
+        right: isMobile ? "50%" :  "90px" ,
+        // right: "90px", 
+        cursor: "pointer", color: disabled ? "gray" : "blue", }}
   >
-    <p><KeyboardArrowLeft />Prev</p>
+    <p className="hmml" style={{fontWeight:'bold'}}><KeyboardArrowLeft />Prev</p>
   </div>
   );
 };

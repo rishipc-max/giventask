@@ -30,7 +30,7 @@ const ContactForm = () => {
                 <label for="message">Message</label>
                 <textarea id="message" name="message"></textarea>
             </div>
-            <button className='form-btn' type="submit">SEND</button>
+            <button className="git-button">SEND</button>
         </form>
     </div>
   )

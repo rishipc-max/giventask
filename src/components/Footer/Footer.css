@@ -1,6 +1,7 @@
 footer {
     background-color: #000;
-    padding: 20px 0 1px 0;
+    padding: 3% 3% 0.5% 3%;
+    /* padding: 20px 0 1px 0; */
     text-align: center;
 }
 
@@ -52,7 +53,7 @@ footer p {
 /* Responsive */
 @media (max-width: 768px) {
     footer {
-        padding: 5% 3% 5% 5%;
+        padding: 5% 3% 1% 5%;
     }
     .footer-nav {
         flex-direction: row;
@@ -68,5 +69,8 @@ footer p {
     .social-icons {
         display: block;
         text-align: left;
+    }
+    .si{
+        margin-right: 30px;
     }
 }

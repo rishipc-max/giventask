@@ -20,6 +20,7 @@ const AboutUs = () => {
         <p className="Text-Heading">
         Vivamus pretium tortor ut magna fringilla, sed iaculis sapien venenatis. Suspendisse sed turpis neque. In tincidunt, augue in tincidunt consectetur, libero neque venenatis leo, vel congue turpis erat nec felis. Nullam nec dolor nec nisl cursus laoreet. Integer sit amet metus venenatis, hendrerit dolor vel, sodales ligula. Aliquam erat volutpat. Maecenas a eros nec mi aliquam euismod.
         </p>
+        <button className="git-button">READ MORE</button>
       </div>
     </div>
   );
