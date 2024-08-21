@@ -38,6 +38,7 @@ const Services = () => {
     ],
   };
   const isMobile = useMediaQuery("(max-width:768px)");
+
   useEffect(() => {
     // Calculate the total number of slides based on your images
     const totalImages = isMobile ? 8 : 6; // You have 3 images in your example
@@ -47,7 +48,7 @@ const Services = () => {
 
   return (
       <div className="services-section">
-      <h1>Our Services</h1>   
+      <h1 style={{marginLeft:"10px"}}>Our Services</h1>   
       <div className="services-container">
         <Slider {...settings}>
        
